@@ -11,7 +11,7 @@ import StarsCanvas from "@/components/stars-canvas";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "Ismail Khan | Personal Portfolio",
+    title: "Ismail Khan | Full-stack Dev",
     description: "Ismail is a full-stack developer with 6 years of experience.",
 };
 

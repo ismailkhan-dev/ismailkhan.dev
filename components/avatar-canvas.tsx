@@ -14,7 +14,6 @@ const Avatar = () => {
     const avatar = useGLTF("/avatar_animation.glb");
     const { actions, names } = useAnimations(avatar.animations, avatar.scene);
 
-    // set useState to 1 for 5 seconds, then set it back to 0 for
     useEffect(() => {
         const currentAction = actions[names[index]];
         if (currentAction) {
@@ -41,7 +40,7 @@ const Avatar = () => {
             <primitive
                 object={avatar.scene}
                 scale={1.8}
-                position-y={-2}
+                position-y={-1.8}
                 rotation-y={-0.3}
                 position-x={0.4}
                 position-z={1.7}
