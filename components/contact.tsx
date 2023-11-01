@@ -15,7 +15,7 @@ export default function Contact() {
         <motion.section
             id="contact"
             ref={ref}
-            className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+            className="mb-20 sm:mb-28 max-w-[100rem] w-full text-center backdrop-blur border dark:border-gray-600 rounded-sm p-8 flex flex-col items-center"
             initial={{
                 opacity: 0,
             }}
@@ -29,46 +29,51 @@ export default function Contact() {
                 once: true,
             }}
         >
-            <SectionHeading>Contact me</SectionHeading>
+            <div className="w-[min(100%,38rem)]">
+                <SectionHeading>Contact me</SectionHeading>
 
-            <p className="text-gray-700 -mt-6 dark:text-white/80">
-                Please contact me directly at{" "}
-                <a className="underline" href="mailto:ismailkhan.dev@gmail.com">
-                    ismailkhan.dev[at]gmail.com
-                </a>{" "}
-                or through this form.
-            </p>
+                <p className="text-gray-700 -mt-6 dark:text-white/80">
+                    Please contact me directly at{" "}
+                    <a
+                        className="underline"
+                        href="mailto:ismailkhan.dev@gmail.com"
+                    >
+                        ismailkhan.dev[at]gmail.com
+                    </a>{" "}
+                    or through this form.
+                </p>
 
-            <form
-                className="mt-10 flex flex-col dark:text-black"
-                action={async (formData) => {
-                    const { data, error } = await sendEmail(formData);
+                <form
+                    className="mt-10 flex flex-col dark:text-black"
+                    action={async (formData) => {
+                        const { data, error } = await sendEmail(formData);
 
-                    if (error) {
-                        toast.error(error);
-                        return;
-                    }
+                        if (error) {
+                            toast.error(error);
+                            return;
+                        }
 
-                    toast.success("Email sent successfully!");
-                }}
-            >
-                <input
-                    className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-                    name="senderEmail"
-                    type="email"
-                    required
-                    maxLength={500}
-                    placeholder="Your email"
-                />
-                <textarea
-                    className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-                    name="message"
-                    placeholder="Your message"
-                    required
-                    maxLength={5000}
-                />
-                <SubmitBtn />
-            </form>
+                        toast.success("Email sent successfully!");
+                    }}
+                >
+                    <input
+                        className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+                        name="senderEmail"
+                        type="email"
+                        required
+                        maxLength={500}
+                        placeholder="Your email"
+                    />
+                    <textarea
+                        className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+                        name="message"
+                        placeholder="Your message"
+                        required
+                        maxLength={5000}
+                    />
+                    <SubmitBtn />
+                </form>
+            </div>
         </motion.section>
     );
 }
