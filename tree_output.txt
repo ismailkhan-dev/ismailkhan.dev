@@ -1,0 +1,57 @@
+command === tree /Users/viz1er/Codebase/ismailkhan.dev -I 'node_modules|dist|build' > tree_output.txt
+
+.
+├── README.md
+├── actions
+│   └── sendEmail.ts
+├── app
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components
+│   ├── about.tsx
+│   ├── avatar-canvas.tsx
+│   ├── contact.tsx
+│   ├── experience.tsx
+│   ├── footer.tsx
+│   ├── header.tsx
+│   ├── intro.tsx
+│   ├── project.tsx
+│   ├── projects.tsx
+│   ├── section-divider.tsx
+│   ├── section-heading.tsx
+│   ├── skills.tsx
+│   ├── stars-canvas.tsx
+│   ├── submit-btn.tsx
+│   └── theme-switch.tsx
+├── context
+│   ├── active-section-context.tsx
+│   └── theme-context.tsx
+├── email
+│   └── contact-form-email.tsx
+├── lib
+│   ├── data.ts
+│   ├── hooks.ts
+│   ├── types.ts
+│   └── utils.ts
+├── next-env.d.ts
+├── next.config.js
+├── output.txt
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+│   ├── CV.pdf
+│   ├── avatar.glb
+│   ├── corpcomment.png
+│   ├── rmtdev.png
+│   └── wordanalytics.png
+├── tailwind.config.js
+├── tree_output.txt
+├── tsconfig.json
+└── types
+    └── maath
+        └── index.d.ts
+
+10 directories, 43 files
