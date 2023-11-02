@@ -5,6 +5,7 @@ import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
+import GithubCalendar from "./github-calendar";
 
 export default function Projects() {
     const { ref } = useSectionInView("Projects", 0.5);
@@ -25,7 +26,10 @@ export default function Projects() {
             </div>
 
             {/* Github contrbituions api */}
-            <div className="mt-24">Github contributions</div>
+            <div className="mt-24">
+                <SectionHeading>My Github contributions</SectionHeading>
+                <GithubCalendar />
+            </div>
         </section>
     );
 }
