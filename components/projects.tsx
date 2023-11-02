@@ -23,6 +23,9 @@ export default function Projects() {
                     </React.Fragment>
                 ))}
             </div>
+
+            {/* Github contrbituions api */}
+            <div className="mt-24">Github contributions</div>
         </section>
     );
 }

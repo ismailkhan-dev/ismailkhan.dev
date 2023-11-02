@@ -112,17 +112,24 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "CorpComment",
+        title: "ChapGPT Clone",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+            "This is a functional recreation of OpenAI's ChatGPT website. It can use all GPT models to query all questions like ChatGPT would.",
+        tags: ["React", "Next.js", "OpenAI API", "Tailwind", "Prisma"],
         imageUrl: corpcommentImg,
     },
     {
-        title: "rmtDev",
+        title: "Trello Clone",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+            "Trello Kanban full-stack app using the MEAN stack. Architecture using MVC model.",
+        tags: [
+            "Angular",
+            "TypeScript",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "GCP",
+        ],
         imageUrl: rmtdevImg,
     },
     {

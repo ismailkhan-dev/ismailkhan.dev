@@ -9,6 +9,7 @@ import {
 import { Canvas, useThree } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 import * as THREE from "three";
+import { MyLoader } from "./avatar-loader";
 
 const Avatar = () => {
     const [index, setIndex] = useState(0);
@@ -57,10 +58,10 @@ export const AvatarCanvas = () => {
             <ambientLight intensity={2.1} />
             <pointLight position={[1, 1, 1]} />
             <OrbitControls enabled={false} />
-            <Suspense fallback={null}>
+            <Suspense fallback={<MyLoader />}>
                 <Avatar />
             </Suspense>
-            <Avatar />
+            <Preload all />
         </Canvas>
     );
 };
