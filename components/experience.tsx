@@ -55,6 +55,9 @@ export default function Experience() {
                             <h3 className="font-semibold capitalize">
                                 {item.title}
                             </h3>
+                            <p className="font-semibold text-rose-700 !mt-0 capitalize">
+                                {item.company}
+                            </p>
                             <p className="font-normal !mt-0">{item.location}</p>
                             <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                                 {item.description}

@@ -5,7 +5,7 @@ import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import ServiceCard from "./service-card";
-import { services } from "@/constants/index";
+import { servicesData } from "@/lib/data";
 
 export default function About() {
     const { ref } = useSectionInView("About");
@@ -29,7 +29,7 @@ export default function About() {
             }}
         >
             <SectionHeading>About me</SectionHeading>
-            <p className="mb-3">
+            <p className="mb-3 text-left">
                 After graduating with a degree in{" "}
                 <span className="font-medium">
                     Accounting/Business Management
@@ -51,7 +51,7 @@ export default function About() {
                 a software developer.
             </p>
 
-            <p className="mb-12">
+            <p className="mb-12 text-left">
                 <span className="italic">When I'm not coding</span>, I enjoy
                 reading, watching movies, and taking care of my family. I also
                 enjoy <span className="font-medium">learning new things</span>.
@@ -77,7 +77,7 @@ export default function About() {
                 }}
                 className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
             >
-                {services.map((service, index) => (
+                {servicesData.map((service, index) => (
                     <ServiceCard
                         key={service.title}
                         index={index}
