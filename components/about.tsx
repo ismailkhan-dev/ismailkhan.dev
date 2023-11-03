@@ -13,7 +13,7 @@ export default function About() {
     return (
         <motion.section
             ref={ref}
-            className="h-full mb-28 max-w-[100rem] leading-relaxed text-justify sm:mb-40 scroll-mt-28 backdrop-blur border dark:border-gray-600 rounded-sm p-8 text-2xl"
+            className="h-full mb-28 max-w-[100rem] leading-normal lg:text-justify sm:mb-40 scroll-mt-28 backdrop-blur border dark:border-gray-600 rounded-sm p-8 sm:text-lg xl:text-2xl"
             id="about"
             initial={{
                 opacity: 0,
@@ -29,7 +29,7 @@ export default function About() {
             }}
         >
             <SectionHeading>About me</SectionHeading>
-            <p className="mb-3">
+            <p className="mb-3 text-center lg:text-justify">
                 After graduating with a degree in{" "}
                 <span className="font-medium">business management</span>, I
                 worked for a tech startup where I found my way into programming.
@@ -52,7 +52,7 @@ export default function About() {
                 case you think you have something interesting!
             </p>
 
-            <p className="mb-12">
+            <p className="mb-12 text-center lg:text-justify">
                 <span className="italic">When I'm not coding</span>, I enjoy
                 reading, watching movies, playing board games, and being a dad
                 and husband.

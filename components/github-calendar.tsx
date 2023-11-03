@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import GitHubCalendar from "react-github-calendar";
 import { useTheme } from "@/context/theme-context";
-import { FaGithubSquare } from "react-icons/fa";
 
 interface UserData {
     login?: string;
+    public_repos?: number;
+    owned_private_repos?: number;
+    public_gists?: number;
+    private_gists?: number;
+    followers?: number;
 }
 
 export default function GithubCalendar() {
@@ -13,6 +17,7 @@ export default function GithubCalendar() {
     const [userData, setUserData] = useState<UserData>({});
     const [repoCount, setRepoCount] = useState<number>(0);
     const [gistCount, setGistCount] = useState<number>(0);
+    const [followerCount, setFollowerCount] = useState<number>(0);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -31,22 +36,22 @@ export default function GithubCalendar() {
 
         const fetchUserData = async () => {
             try {
-                const [userResponse, reposResponse, gistResponse] =
-                    await Promise.all([
-                        axios.get<UserData>(`${url}`, {
-                            headers: { Authorization: `Bearer ${token}` },
-                        }),
-                        axios.get(`${url}/repos`, {
-                            headers: { Authorization: `Bearer ${token}` },
-                        }),
-                        axios.get(`${url}/gists`, {
-                            headers: { Authorization: `Bearer ${token}` },
-                        }),
-                    ]);
+                const userResponse = await axios.get<UserData>(`${url}`, {
+                    headers: { Authorization: `Bearer ${token}` },
+                });
 
                 setUserData(userResponse.data);
-                setRepoCount(reposResponse.data.length);
-                setGistCount(gistResponse.data.length);
+                console.log(userResponse.data);
+
+                setRepoCount(
+                    (userResponse.data.public_repos || 0) +
+                        (userResponse.data.owned_private_repos || 0)
+                );
+                setGistCount(
+                    (userResponse.data.public_gists || 0) +
+                        (userResponse.data.private_gists || 0)
+                );
+                setFollowerCount(userResponse.data.followers || 0);
             } catch (error) {
                 console.error("Error fetching data: ", error);
                 setError("An error occurred while fetching data.");
@@ -68,36 +73,25 @@ export default function GithubCalendar() {
 
     return (
         <div>
-            <h3 className="text-center mb-1">
-                Check out my GitHub Profile below for more work I've done.
-            </h3>
-            <div className="flex flex-row gap-2 items-center justify-center mb-1">
-                <p className="font-semibold">Repository count: {repoCount}</p>
-                <p className="font-semibold mr-4">Gist count: {gistCount}</p>
-            </div>
-            <div className="flex flex-row gap-2 items-center justify-center my-6">
-                <a
-                    className="bg-white p-3 text-gray-700 dark:text-gray-300 flex items-center gap-2 text-[1.9rem] rounded-lg focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 dark:hover:text-white active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-                    href="https://github.com/ismailkhan-dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <FaGithubSquare />
-                    <p className="text-[1.2rem] font-bold">
-                        Visit Github Profile
-                    </p>
-                </a>
-            </div>
-
             {userData.login && (
-                <div>
-                    <GitHubCalendar
-                        username={userData.login}
-                        blockSize={15}
-                        blockMargin={4}
-                        colorScheme={theme}
-                        fontSize={16}
-                    />
+                <div className="flex lg:justify-center sm:justify-start">
+                    <div className="overflow-x-auto min-w-[1000px]">
+                        <div className="flex justify-start">
+                            <GitHubCalendar
+                                username={userData.login}
+                                blockSize={15}
+                                blockMargin={4}
+                                colorScheme={theme}
+                                fontSize={16}
+                            />
+                        </div>
+
+                        <div className="flex flex-row gap-2">
+                            <p>Repositories: {repoCount}</p>
+                            <p>Gists: {gistCount}</p>
+                            <p>Followers: {followerCount}</p>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>

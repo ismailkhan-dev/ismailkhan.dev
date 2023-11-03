@@ -31,22 +31,19 @@ export default function Skills() {
         >
             <SectionHeading>My skills</SectionHeading>
 
-            <div className="flex flex-row my-12">
-                <h3 className="flex-grow basis-1/3 text-2xl font-semibold">
+            {/* Adjusted for better responsiveness */}
+            <div className="my-12 flex flex-col sm:flex-row">
+                <h3 className="text-2xl font-semibold mb-4 sm:mb-0 sm:flex-grow sm:basis-1/3">
                     Tech I use at work
                 </h3>
-
-                <ul className="flex flex-wrap flex-grow basis-2/3 justify-start gap-2 text-lg text-gray-800">
+                <ul className="flex flex-wrap justify-center sm:justify-start sm:flex-grow sm:basis-2/3 gap-2 text-lg text-gray-800">
                     {workSkillsData.map((skill, index) => (
                         <motion.li
-                            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-                            key={index}
+                            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 m-1"
+                            key={skill} // Prefer using unique identifiers like skill names instead of index for keys if possible
                             variants={fadeInAnimationVariants}
                             initial="initial"
                             whileInView="animate"
-                            viewport={{
-                                once: true,
-                            }}
                             custom={index}
                         >
                             {skill}
@@ -55,21 +52,18 @@ export default function Skills() {
                 </ul>
             </div>
 
-            <div className="flex flex-row my-12">
-                <h3 className="flex-grow basis-1/3 text-2xl font-semibold">
+            <div className="my-12 flex flex-col sm:flex-row">
+                <h3 className="text-2xl font-semibold mb-4 sm:mb-0 sm:flex-grow sm:basis-1/3">
                     Tech I worked with before
                 </h3>
-                <ul className="flex flex-wrap flex-grow basis-2/3 justify-start gap-2 text-lg text-gray-800">
+                <ul className="flex flex-wrap justify-center sm:justify-start sm:flex-grow sm:basis-2/3 gap-2 text-lg text-gray-800">
                     {prevSkillsData.map((skill, index) => (
                         <motion.li
-                            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-                            key={index}
+                            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 m-1"
+                            key={skill} // Same as above, use unique identifiers
                             variants={fadeInAnimationVariants}
                             initial="initial"
                             whileInView="animate"
-                            viewport={{
-                                once: true,
-                            }}
                             custom={index}
                         >
                             {skill}

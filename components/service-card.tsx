@@ -17,14 +17,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => (
         className="xs:w-[250px] w-full"
     >
         <motion.div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
-            <div className="bg-gray-100 dark:bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col hover:bg-gray-200 ">
+            <div className="flex flex-col justify-evenly items-center xs:justify-start xs:items-center xs:flex-row bg-gray-100 dark:bg-tertiary rounded-[20px] py-5 px-12 hover:bg-gray-200 lg:min-h-[250px]">
                 <img
                     src={icon}
                     alt="web-development"
-                    className="w-16 h-16 object-contain"
+                    className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
                 />
 
-                <h3 className="dark:text-white text-[20px] font-bold text-center">
+                <h3 className="dark:text-white text-lg sm:text-[20px] font-bold text-center mt-2 sm:mt-0 sm:ml-4">
                     {title}
                 </h3>
             </div>
