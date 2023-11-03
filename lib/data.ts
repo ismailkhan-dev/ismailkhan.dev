@@ -4,9 +4,10 @@ import { FaReact } from "react-icons/fa";
 import { LiaAngular } from "react-icons/lia";
 import { RiJavascriptLine } from "react-icons/ri";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import chatgptImg from "@/public/chatgpt.jpg";
+import trellodashImg from "@/public/trellodash.png";
+import portfolioImg from "@/public/portfolio.png";
+import corpImg from "@/public/corpcomment.png";
 
 export const links = [
     {
@@ -112,16 +113,18 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "ChapGPT Clone",
+        title: "ChatGPT Bot",
         description:
-            "This is a functional recreation of OpenAI's ChatGPT website. It can use all GPT models to query all questions like ChatGPT would.",
-        tags: ["React", "Next.js", "OpenAI API", "Tailwind", "Prisma"],
-        imageUrl: corpcommentImg,
+            "Fully functional recreation of OpenAI's ChatGPT website. All LLM models and features are available.",
+        tags: ["React", "Next.js", "OpenAI API", "Tailwind", "Firebase"],
+        imageUrl: chatgptImg,
+        liveDemoUrl: "https://chat.openai.com/",
+        githubRepoUrl: "https://github.com/ismailkhan-dev/chatgptmessenger",
     },
     {
-        title: "Trello Clone",
+        title: "Trello Kanban App",
         description:
-            "Trello Kanban full-stack app using the MEAN stack. Architecture using MVC model.",
+            "Full-stack Kanban app utilizing the MEAN stack. Architecture based on MVC model.",
         tags: [
             "Angular",
             "TypeScript",
@@ -130,14 +133,18 @@ export const projectsData = [
             "MongoDB",
             "GCP",
         ],
-        imageUrl: rmtdevImg,
+        imageUrl: trellodashImg,
+        liveDemoUrl: "https://trello.com/",
+        githubRepoUrl: "https://github.com/ismailkhan-dev/trelloboard-app",
     },
     {
-        title: "Word Analytics",
+        title: "Personal Portfolio",
         description:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+            "Personal website that houses my digital tech portfolio and persona.",
         tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-        imageUrl: wordanalyticsImg,
+        imageUrl: portfolioImg,
+        liveDemoUrl: "https://ismailkhan.dev/",
+        githubRepoUrl: "https://github.com/ismailkhan-dev/ismailkhan.dev",
     },
 ] as const;
 

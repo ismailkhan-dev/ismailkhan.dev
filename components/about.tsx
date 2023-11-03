@@ -13,7 +13,7 @@ export default function About() {
     return (
         <motion.section
             ref={ref}
-            className="h-full mb-28 max-w-[100rem] text-center leading-15 sm:mb-40 scroll-mt-28 backdrop-blur border dark:border-gray-600 rounded-sm p-8 text-2xl"
+            className="h-full mb-28 max-w-[100rem] leading-relaxed text-justify sm:mb-40 scroll-mt-28 backdrop-blur border dark:border-gray-600 rounded-sm p-8 text-2xl"
             id="about"
             initial={{
                 opacity: 0,
@@ -29,34 +29,33 @@ export default function About() {
             }}
         >
             <SectionHeading>About me</SectionHeading>
-            <p className="mb-3 text-left">
+            <p className="mb-3">
                 After graduating with a degree in{" "}
-                <span className="font-medium">
-                    Accounting/Business Management
-                </span>
-                , I decided to pursue my passion for programming. I enrolled in
-                a coding bootcamp at Juno College and learned{" "}
+                <span className="font-medium">business management</span>, I
+                worked for a tech startup where I found my way into programming.
+                A new passion was born and I haven't looked back since. After a
+                few gigs in JS web development, I completed a coding bootcamp
+                that solidified my skills, plus I learned{" "}
                 <span className="font-medium">full-stack web development</span>.{" "}
                 <span className="italic">My favorite part of programming</span>{" "}
-                is the problem-solving aspect. I{" "}
-                <span className="underline">love</span> the feeling of finally
-                figuring out a solution to a problem. My core stack is the MEAN
-                stack{" "}
+                is being technically creative. I{" "}
+                <span className="underline">enjoy</span> the accomplishment of
+                finally figuring out a solution to a problem. My current working
+                stack is the MEAN stack:{" "}
                 <span className="font-medium">
                     Angular, Express.js, Node.js, and MongoDB
                 </span>
-                . I am also familiar with TypeScript, Java, and Postgres. I am
-                always looking to learn new technologies. I am currently looking
-                for a <span className="font-medium">full-time position</span> as
-                a software developer.
+                . I also use TypeScript and Java daily. I am always exploring
+                and learning new technologies. I am not currently looking for
+                any new opportunities, but{" "}
+                <span className="font-medium">feel free to connect</span> in
+                case you think you have something interesting!
             </p>
 
-            <p className="mb-12 text-left">
+            <p className="mb-12">
                 <span className="italic">When I'm not coding</span>, I enjoy
-                reading, watching movies, and taking care of my family. I also
-                enjoy <span className="font-medium">learning new things</span>.
-                I am currently learning about{" "}
-                <span className="font-medium">Islamic history</span>.
+                reading, watching movies, playing board games, and being a dad
+                and husband.
             </p>
 
             {/* Service Cards */}

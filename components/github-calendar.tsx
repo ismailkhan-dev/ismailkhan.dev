@@ -77,13 +77,13 @@ export default function GithubCalendar() {
             </div>
             <div className="flex flex-row gap-2 items-center justify-center my-6">
                 <a
-                    className="bg-white p-2 text-gray-700 dark:text-gray-300 flex items-center gap-2 text-[1.9rem] rounded-sm focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 dark:hover:text-white active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                    className="bg-white p-3 text-gray-700 dark:text-gray-300 flex items-center gap-2 text-[1.9rem] rounded-lg focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 dark:hover:text-white active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
                     href="https://github.com/ismailkhan-dev"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     <FaGithubSquare />
-                    <p className="text-[1.4rem] font-bold">
+                    <p className="text-[1.2rem] font-bold">
                         Visit Github Profile
                     </p>
                 </a>
