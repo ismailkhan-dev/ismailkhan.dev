@@ -50,7 +50,7 @@ export default function Project({
                             </li>
                         ))}
                     </ul>
-                    <div className="flex flex-row gap-4 mt-4">
+                    <div className="flex xl:flex-row flex-col gap-4 mt-4">
                         {liveDemoUrl && (
                             <a
                                 href={liveDemoUrl}

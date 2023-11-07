@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -14,32 +14,104 @@ import { AvatarCanvas } from "./avatar-canvas";
 export default function Intro() {
     const { ref } = useSectionInView("Home", 0.5);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+    const [isXlScreen, setIsXlScreen] = useState(false);
+
+    useEffect(() => {
+        function handleResize() {
+            setIsXlScreen(window.innerWidth >= 1280);
+        }
+
+        window.addEventListener("resize", handleResize);
+        handleResize();
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <section
             ref={ref}
             id="home"
-            className="h-screen mb-28 max-w-[100rem] mx-auto text-left sm:mb-0 scroll-mt-[100rem] flex flex-col sm:flex-row sm:items-start sm:justify-center p-4 backdrop-blur border dark:border-gray-600 rounded-sm"
+            className="h-screen mb-28 w-full max-w-[100rem] sm:mb-0 scroll-mt-[100rem] flex flex-col sm:items-start sm:justify-center p-4 backdrop-blur border dark:border-gray-600 rounded-sm"
         >
+            {/* Avatar Image */}
+            {!isXlScreen && (
+                <div
+                    className={`w-full h-64 xl:hidden ${
+                        isXlScreen
+                            ? "hidden"
+                            : "flex items-center justify-center"
+                    }`}
+                >
+                    <div className="relative inline-block">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{
+                                type: "tween",
+                                duration: 0.2,
+                            }}
+                        >
+                            <Image
+                                src="/ismail-avatar.png"
+                                alt="Ismail Avatar"
+                                width="192"
+                                height="192"
+                                quality="95"
+                                priority={true}
+                                className="h-42 w-36 object-cover border-2 dark:border-gray-600 rounded-sm shadow-xl"
+                            />
+                        </motion.div>
+                        <motion.span
+                            className="absolute bottom-0 -right-3 text-[3rem]"
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 125,
+                                delay: 0.1,
+                                duration: 0.7,
+                            }}
+                        >
+                            👋🏾
+                        </motion.span>
+                    </div>
+                </div>
+            )}
+
             {/* Text and Buttons */}
-            <div className="xl:pt-48 xl:pl-24 w-3/4 xl:text-left">
-                <motion.h1
+            <div
+                className={`flex flex-col h-full text-center items-center justify-center ${
+                    isXlScreen
+                        ? "w-full sm:w-auto sm:px-28 sm:mt-[-22rem]"
+                        : "w-full p-4"
+                }`}
+            >
+                <motion.div
                     className="mb-10 mt-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                 >
-                    <span className="font-bold">Hello, I'm Ismail.</span> <br />
-                    I'm a{" "}
-                    <span className="font-bold">
-                        full-stack developer
-                    </span> with <span className="font-bold">6 years</span> of
-                    experience. I enjoy building{" "}
-                    <span className="italic">sites & apps</span>. My focus is{" "}
-                    <span className="underline">Angular and Java</span>.
-                </motion.h1>
+                    <h1 className="font-bold text-5xl mb-2">
+                        Hello, I'm Ismail.
+                    </h1>
+                    <p>
+                        I'm a{" "}
+                        <span className="font-bold">
+                            full-stack web developer
+                        </span>{" "}
+                        with <span className="font-bold">6 years</span> of
+                        experience.
+                    </p>
+
+                    <p className="text-xl mt-2">
+                        I enjoy building{" "}
+                        <span className="italic">sites & apps</span>. My focus
+                        is <span className="underline">Angular and Java</span>.
+                    </p>
+                </motion.div>
 
                 <motion.div
-                    className="flex flex-col sm:flex-row items-start justify-start gap-4 text-lg font-medium"
+                    className="flex flex-wrap sm:flex-row xl:items-start xl:justify-start items-center justify-center gap-4 text-lg font-medium"
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
@@ -68,7 +140,7 @@ export default function Intro() {
                 </motion.div>
 
                 <motion.div
-                    className="flex flex-col sm:flex-row items-start justify-start gap-2 pt-4 text-lg font-medium"
+                    className="flex flex-wrap sm:flex-row xl:items-start xl:justify-start items-center justify-center gap-2 pt-4 text-lg font-medium"
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
@@ -98,37 +170,22 @@ export default function Intro() {
                     </a>
                     <a
                         className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-                        href="https://codepen.io/ismailkn"
-                        target="_blank"
-                    >
-                        <FaCodepen />
-                    </a>
-                    <a
-                        className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
                         href="https://leetcode.com/ismailkhan9/"
                         target="_blank"
                     >
                         <SiLeetcode />
                     </a>
                 </motion.div>
-
-                <motion.div
-                    className="flex flex-col sm:flex-row items-start justify-start gap-2 pt-4 text-lg font-medium"
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                        delay: 0.1,
-                    }}
-                ></motion.div>
             </div>
 
             {/* Avatar */}
-            <div className="h-full w-11/12">
-                <div className="relative h-full">
-                    {/* Avatar Animation */}
-                    <AvatarCanvas />
+            {isXlScreen && (
+                <div className="hidden xl:block absolute inset-y-0 right-0 w-full h-full xl:w-[45%]">
+                    <div className="relative h-full">
+                        <AvatarCanvas />
+                    </div>
                 </div>
-            </div>
+            )}
         </section>
     );
 }

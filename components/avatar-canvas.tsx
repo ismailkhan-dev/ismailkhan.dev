@@ -2,6 +2,7 @@
 import {
     Html,
     OrbitControls,
+    PerspectiveCamera,
     Preload,
     useAnimations,
     useGLTF,
@@ -41,10 +42,10 @@ const Avatar = () => {
         <group>
             <primitive
                 object={avatar.scene}
-                scale={1.8}
-                position-y={-1.8}
+                scale={1.7}
+                position-y={-1.5}
                 rotation-y={-0.3}
-                position-x={0.4}
+                position-x={0.5}
                 position-z={1.7}
                 rotation-x={Math.PI / 7}
             />
@@ -54,7 +55,8 @@ const Avatar = () => {
 
 export const AvatarCanvas = () => {
     return (
-        <Canvas dpr={[0, 2]} className="h-full">
+        <Canvas dpr={[1, 2]} className="z-999 h-full">
+            <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={80} />
             <ambientLight intensity={2.1} />
             <pointLight position={[1, 1, 1]} />
             <OrbitControls enabled={false} />
