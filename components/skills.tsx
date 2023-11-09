@@ -33,7 +33,7 @@ export default function Skills() {
 
             <div className="my-12 flex flex-col sm:flex-row">
                 <h3 className="text-2xl font-semibold mb-4 sm:mb-0 sm:flex-grow sm:basis-1/3">
-                    Tech I use at work
+                    Current Work Tech Stack
                 </h3>
                 <ul className="flex flex-wrap justify-center sm:justify-start sm:flex-grow sm:basis-2/3 gap-2 text-lg text-gray-800">
                     {workSkillsData.map((skill, index) => (
@@ -53,7 +53,7 @@ export default function Skills() {
 
             <div className="my-12 flex flex-col sm:flex-row">
                 <h3 className="text-2xl font-semibold mb-4 sm:mb-0 sm:flex-grow sm:basis-1/3">
-                    Tech I worked with before
+                    Past Tech Stack
                 </h3>
                 <ul className="flex flex-wrap justify-center sm:justify-start sm:flex-grow sm:basis-2/3 gap-2 text-lg text-gray-800">
                     {prevSkillsData.map((skill, index) => (

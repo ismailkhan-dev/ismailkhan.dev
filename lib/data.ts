@@ -86,7 +86,7 @@ export const experiencesData = [
         company: "Juno College of Technology",
         location: "Toronto, CA",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "Completed all-round web development and full-stack bootcamp solidifying my tech skills.",
         icon: React.createElement(LuGraduationCap),
         date: "Sept - Oct 2020",
     },
