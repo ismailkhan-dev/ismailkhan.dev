@@ -8,11 +8,13 @@ import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import StarsCanvas from "@/components/stars-canvas";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+    subsets: ["latin"],
+});
 
 export const metadata = {
-    title: "Ismail Khan | Full-stack Dev",
-    description: "Ismail is a full-stack developer with 6 years of experience.",
+    title: "Ismail Khan | Full-Stack Dev",
+    description: "A full-stack developer with 6 years of experience.",
 };
 
 export default function RootLayout({

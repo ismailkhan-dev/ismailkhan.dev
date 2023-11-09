@@ -41,7 +41,6 @@ export default function GithubCalendar() {
                 });
 
                 setUserData(userResponse.data);
-                console.log(userResponse.data);
 
                 setRepoCount(
                     (userResponse.data.public_repos || 0) +

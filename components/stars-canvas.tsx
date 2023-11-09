@@ -13,6 +13,18 @@ const StarBackground = (props: any) => {
     const [sphere] = useState(() =>
         random.inSphere(new Float32Array(5000), { radius: 1.2 })
     );
+    const originalConsoleError = console.error;
+    console.error = (...args) => {
+        if (
+            args[0].includes(
+                "THREE.BufferGeometry.computeBoundingSphere(): Computed radius is NaN"
+            )
+        ) {
+            return;
+        }
+
+        originalConsoleError(...args);
+    };
 
     useFrame((state, delta) => {
         ref.current.rotation.x -= delta / 10;
@@ -33,7 +45,7 @@ const StarBackground = (props: any) => {
                     color={theme === "light" ? "black" : "white"}
                     size={0.003}
                     sizeAttenuation={true}
-                    dethWrite={false}
+                    depthWrite={false}
                 />
             </Points>
         </group>

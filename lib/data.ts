@@ -7,7 +7,6 @@ import { LuGraduationCap } from "react-icons/lu";
 import chatgptImg from "@/public/chatgpt.jpg";
 import trellodashImg from "@/public/trellodash.png";
 import portfolioImg from "@/public/portfolio.png";
-import corpImg from "@/public/corpcomment.png";
 
 export const links = [
     {
@@ -171,7 +170,6 @@ export const workSkillsData = [
     "Maven",
     "Jenkins",
     "Bamboo",
-    "Git",
     "Bitbucket",
 ] as const;
 
