@@ -19,3 +19,8 @@ html.dark {
     background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
     background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
+
+.gradient-text {
+    @apply bg-gradient-to-r from-[#00C9A7] to-[#005B4F] bg-clip-text text-transparent;
+}
+/* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */

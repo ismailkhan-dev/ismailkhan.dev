@@ -41,25 +41,25 @@ export const experiencesData = [
         company: "Arqam House",
         location: "Toronto, CA",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+            "Designed, developed, tested, and analyzed ticketing software application for a tech start-up in Toronto. Focus on client-side and JavaScript.",
         icon: React.createElement(CgWorkAlt),
         date: "Sept 2015 - Sept 2017",
     },
     {
-        title: "Bachelor of Commerce Graduation",
+        title: "Bachelor Degree Graduate",
         company: "Toronto Metropolitian University",
         location: "Toronto, CA",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+            "Graduated with a business degree. Focus on business technology and self-studying web development.",
         icon: React.createElement(LuGraduationCap),
         date: "Mar 2017",
     },
     {
-        title: "Web Developer (contract)",
+        title: "Web Developer",
         company: "Wilson-Niblett Motors",
         location: "Toronto, CA",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+            "Focus on refactoring front-end of website with JavaScript, SCSS, and other web development tech.",
         icon: React.createElement(RiJavascriptLine),
         date: "Sept 2017 - Feb 2018",
     },
@@ -68,7 +68,7 @@ export const experiencesData = [
         company: "4GL Solutions",
         location: "Toronto, CA",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "Previously engineered cutting-edge, interactive web applications by leveraging the power of JS frameworks, streamlining complex front-end development to optimize user engagement.",
         icon: React.createElement(RiJavascriptLine),
         date: "Sept 2017 - Feb 2018",
     },
@@ -77,12 +77,12 @@ export const experiencesData = [
         company: "Venus Concept",
         location: "Toronto, CA",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "Specialized in building responsive and intuitive web interfaces using modern JavaScript frameworks, ensuring high performance and maintainability across diverse web projects.",
         icon: React.createElement(RiJavascriptLine),
         date: "Feb 2018 - Aug 2020",
     },
     {
-        title: "web development bootcamp graduation",
+        title: "Web Dev Bootcamp Graduate",
         company: "Juno College of Technology",
         location: "Toronto, CA",
         description:
@@ -95,7 +95,7 @@ export const experiencesData = [
         company: "Badr Consulting Group Inc.",
         location: "Toronto, CA",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+            "Versatile Full-Stack Developer with expertise in the MEAN stack, integrating MongoDB, Express.js, Angular, and Node.js to build complete, end-to-end solutions for web applications.",
         icon: React.createElement(FaReact),
         date: "Jan 2021 - Present",
     },
@@ -104,7 +104,7 @@ export const experiencesData = [
         company: "The Home Depot Canada",
         location: "Toronto, CA",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+            "Developing enterprise-level solutions by synergizing Angular for front-end finesse with robust Java back-end services, all seamlessly orchestrated on the Google Cloud Platform.",
         icon: React.createElement(LiaAngular),
         date: "Feb 2021 - Present",
     },

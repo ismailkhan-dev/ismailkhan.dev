@@ -31,7 +31,7 @@ export default function Intro() {
         <section
             ref={ref}
             id="home"
-            className="h-screen mb-28 w-full max-w-[100rem] sm:mb-0 scroll-mt-[100rem] flex flex-col sm:items-start sm:justify-center p-4 backdrop-blur border dark:border-gray-600 rounded-sm"
+            className="h-screen mb-28 w-full max-w-[75rem] sm:mb-0 scroll-mt-[100rem] flex flex-col sm:items-center sm:justify-center p-4 backdrop-blur border dark:border-gray-600 rounded-sm"
         >
             {/* Avatar Image */}
             {!isXlScreen && (
@@ -80,7 +80,7 @@ export default function Intro() {
 
             {/* Text and Buttons */}
             <div
-                className={`flex flex-col h-full text-center items-center justify-center ${
+                className={`flex flex-col h-full xl:text-left text-center xl:items-start xl:justify-center justify-start items-center ${
                     isXlScreen
                         ? "w-full sm:w-auto sm:px-28 sm:mt-[-22rem]"
                         : "w-full p-4"
@@ -91,12 +91,15 @@ export default function Intro() {
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                 >
-                    <h1 className="font-bold text-5xl mb-2">
-                        Hello, I'm Ismail.
+                    <span className="text-[0.85rem] uppercase font-extrabold">
+                        Hello world, I am
+                    </span>
+                    <h1 className="font-black text-6xl mb-2 gradient-text">
+                        Ismail Khan
                     </h1>
-                    <p>
-                        I'm a{" "}
-                        <span className="font-bold">
+                    <p className="xl:w-2/3 w-full">
+                        A{" "}
+                        <span className="font-bold gradient-text">
                             full-stack web developer
                         </span>{" "}
                         with <span className="font-bold">6 years</span> of
@@ -104,14 +107,14 @@ export default function Intro() {
                     </p>
 
                     <p className="text-xl mt-2">
-                        I enjoy building{" "}
-                        <span className="italic">sites & apps</span>. My focus
+                        I build enterprise-level{" "}
+                        <span className="italic">sites & apps</span>. I focus on{" "}
                         is <span className="underline">Angular and Java</span>.
                     </p>
                 </motion.div>
 
                 <motion.div
-                    className="flex flex-wrap sm:flex-row xl:items-start xl:justify-start items-center justify-center gap-4 text-lg font-medium"
+                    className="flex flex-wrap sm:flex-row items-center justify-center gap-4 text-lg font-medium"
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
@@ -120,7 +123,7 @@ export default function Intro() {
                 >
                     <Link
                         href="#contact"
-                        className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+                        className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer hover:bg-gray-950 borderBlack dark:bg-white/10"
                         onClick={() => {
                             setActiveSection("Contact");
                             setTimeOfLastClick(Date.now());
@@ -140,7 +143,7 @@ export default function Intro() {
                 </motion.div>
 
                 <motion.div
-                    className="flex flex-wrap sm:flex-row xl:items-start xl:justify-start items-center justify-center gap-2 pt-4 text-lg font-medium"
+                    className="flex flex-wrap sm:flex-row items-center justify-center gap-2 pt-4 text-lg font-medium"
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{

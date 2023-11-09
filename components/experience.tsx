@@ -19,7 +19,7 @@ export default function Experience() {
         <section
             id="experience"
             ref={ref}
-            className="max-w-[100rem] w-full scroll-mt-28 mb-28 sm:mb-40 backdrop-blur border dark:border-gray-600 rounded-sm p-8"
+            className="max-w-[75rem] w-full scroll-mt-28 mb-28 sm:mb-40 backdrop-blur border dark:border-gray-600 rounded-sm p-8"
         >
             <SectionHeading>My experience</SectionHeading>
             <VerticalTimeline lineColor="">
@@ -52,13 +52,15 @@ export default function Experience() {
                                 fontSize: "1.5rem",
                             }}
                         >
-                            <h3 className="font-semibold capitalize">
+                            <h3 className="font-black capitalize gradient-text">
                                 {item.title}
                             </h3>
-                            <p className="font-semibold text-rose-700 !mt-0 capitalize">
+                            <p className="font-semibold italic !mt-0 capitalize">
                                 {item.company}
                             </p>
-                            <p className="font-normal !mt-0">{item.location}</p>
+                            <p className="font-normal !mt-0">
+                                {item.location} 🇨🇦
+                            </p>
                             <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                                 {item.description}
                             </p>

@@ -13,7 +13,7 @@ export default function About() {
     return (
         <motion.section
             ref={ref}
-            className="h-full mb-28 max-w-[100rem] leading-normal lg:text-justify sm:mb-40 scroll-mt-28 backdrop-blur border dark:border-gray-600 rounded-sm p-8 sm:text-lg xl:text-2xl"
+            className="h-full mb-28 max-w-[75rem] leading-normal lg:text-justify sm:mb-40 scroll-mt-28 backdrop-blur border dark:border-gray-600 rounded-sm p-8 sm:text-lg xl:text-xl"
             id="about"
             initial={{
                 opacity: 0,

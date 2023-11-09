@@ -15,7 +15,7 @@ export default function Projects() {
         <section
             ref={ref}
             id="projects"
-            className="scroll-mt-28 mb-28 backdrop-blur border dark:border-gray-600 rounded-sm max-w-[100rem] w-full flex flex-col items-center justify-center p-8"
+            className="scroll-mt-28 mb-28 backdrop-blur border dark:border-gray-600 rounded-sm max-w-[75rem] w-full flex flex-col items-center justify-center p-8"
         >
             <SectionHeading>My projects</SectionHeading>
             <div>

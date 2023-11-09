@@ -56,7 +56,7 @@ export default function Project({
                                 href={liveDemoUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group bg-white px-4 py-3 flex items-center gap-2 rounded-sm outline-none focus:scale-110 hover:scale-110 dark:hover:bg-tertiary/[0.7] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+                                className="group bg-white px-4 py-3 flex items-center gap-2 rounded-sm outline-none focus:scale-110 hover:scale-110 dark:hover:bg-darkTertiary/[0.7] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
                             >
                                 <div className="flex flex-wrap gap-1 items-center">
                                     <MdOutlineOpenInNew />
@@ -70,7 +70,7 @@ export default function Project({
                                 href={githubRepoUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group bg-white px-4 py-3 flex items-center gap-2 rounded-sm outline-none focus:scale-110 hover:scale-110 dark:hover:bg-tertiary/[0.7] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+                                className="group bg-white px-4 py-3 flex items-center gap-2 rounded-sm outline-none focus:scale-110 hover:scale-110 dark:hover:bg-darkTertiary/[0.7] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
                             >
                                 <div className="flex flex-wrap gap-1 items-center">
                                     <FaGithubSquare />

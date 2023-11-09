@@ -17,7 +17,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => (
         className="xs:w-[250px] w-full"
     >
         <motion.div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
-            <div className="flex flex-col justify-evenly items-center xs:justify-start xs:items-center xs:flex-row bg-gray-100 dark:bg-tertiary rounded-[20px] py-5 px-12 hover:bg-gray-200 lg:min-h-[250px]">
+            <div className="flex flex-col justify-evenly items-center xs:justify-start xs:items-center xs:flex-row bg-gray-100 dark:bg-darkPrimary rounded-[20px] py-5 px-12 hover:bg-gray-200 lg:min-h-[250px]">
                 <img
                     src={icon}
                     alt={title}

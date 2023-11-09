@@ -11,9 +11,9 @@ export default function Footer() {
             <small className="mb-1 text-md">
                 &copy; 2023 Ismail Khan. All rights reserved.
             </small>
-            <p className="text-sm">
-                Built with ☕ and React, Next.js, TypeScript, Tailwind, Three.js
-                and Framer Motion.
+            <p className="text-xs">
+                Built with ☕, and React, Next.js, TypeScript, Tailwind,
+                Three.js, and Framer Motion.
             </p>
         </footer>
     );
