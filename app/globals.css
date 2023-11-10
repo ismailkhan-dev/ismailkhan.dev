@@ -23,4 +23,3 @@ html.dark {
 .gradient-text {
     @apply bg-gradient-to-r from-[#00C9A7] to-[#005B4F] bg-clip-text text-transparent;
 }
-/* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */

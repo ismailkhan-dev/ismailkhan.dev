@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { FaCodepen, FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
+import { FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
