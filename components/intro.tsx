@@ -6,7 +6,7 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-import { HiDownload } from "react-icons/hi";
+import { HiDownload, HiPencilAlt } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { AvatarCanvas } from "./avatar-canvas";
@@ -108,8 +108,8 @@ export default function Intro() {
 
                     <p className="text-xl mt-2">
                         I build enterprise-level{" "}
-                        <span className="italic">sites & apps</span>. I focus on{" "}
-                        is <span className="underline">Angular and Java</span>.
+                        <span className="italic">sites & apps</span> using{" "}
+                        <span className="underline">Angular and Java</span>.
                     </p>
                 </motion.div>
 
@@ -132,6 +132,13 @@ export default function Intro() {
                         Contact me here{" "}
                         <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
                     </Link>
+                    <a
+                        className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+                        href="https://www.blog.ismailkhan.dev"
+                    >
+                        Read my blog{" "}
+                        <HiPencilAlt className="opacity-60 group-hover:translate-y-1 transition" />
+                    </a>
                     <a
                         className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
                         href="/ismail-khan-cv.pdf"

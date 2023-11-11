@@ -16,7 +16,7 @@ const Blog = () => {
     const { ref } = useSectionInView("Blog");
     const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const rssUrl = "https://blog.ismailkhan.dev/rss.xml";
+    const rssUrl = "https://www.blog.ismailkhan.dev/rss.xml";
 
     useEffect(() => {
         parse(rssUrl, {})
@@ -60,7 +60,7 @@ const Blog = () => {
             <SectionHeading>My Latest Posts</SectionHeading>
             {isLoading ? (
                 <div>Loading latest blog posts...</div>
-            ) : (
+            ) : blogPosts.length > 0 ? (
                 <div className="space-y-6">
                     {blogPosts.map((post, index) => (
                         <article
@@ -93,6 +93,10 @@ const Blog = () => {
                             </p>
                         </article>
                     ))}
+                </div>
+            ) : (
+                <div className="text-center">
+                    No posts are available to view at the moment...
                 </div>
             )}
         </motion.section>
