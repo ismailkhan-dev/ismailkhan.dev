@@ -56,11 +56,8 @@ export default function ThemeContextProvider({
         const localTheme = window.localStorage.getItem("theme") as Theme | null;
         const cookieTheme = getCookie("theme");
 
-        const effectiveTheme =
-            localTheme ||
-            (cookieTheme === "light" || cookieTheme === "dark"
-                ? cookieTheme
-                : "light");
+        const effectiveTheme = (cookieTheme || localTheme || "light") as Theme;
+
         setTheme(effectiveTheme);
         if (effectiveTheme === "dark") {
             document.documentElement.classList.add("dark");
@@ -68,6 +65,7 @@ export default function ThemeContextProvider({
             document.documentElement.classList.remove("dark");
         }
         setCookie("theme", effectiveTheme, 365);
+        window.localStorage.setItem("theme", effectiveTheme);
     }, []);
 
     const toggleTheme = () => {
